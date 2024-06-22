@@ -11,8 +11,12 @@ stage('maven package'){
  sh 'mvn package'
 }
 }
+stage('building image'){
+ steps{
+sh 'docker build -t sidharth1997/project:v1.0'
+}
 
-
+}
 
 }
 }
