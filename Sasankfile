@@ -13,7 +13,7 @@ stage('maven package'){
 }
 stage('building image'){
  steps{
-sh 'docker build -t sidharth1997/project:v1.0'
+sh 'docker build -t sidharth1997/project:v1.0 .'
 }
 
 }
