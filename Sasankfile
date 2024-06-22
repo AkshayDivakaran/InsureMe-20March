@@ -19,8 +19,8 @@ sh 'docker build -t sidharth1997/project:v1.0 .'
 }
 stage('login docker'){
  steps{
-withCredentials([usernamePassword(credentialsId: '209110ec-e209-4b7e-a1b9-5b5f05ab57ef', passwordVariable: 'pass', usernameVariable: 'user')]) {
-sh 'docker login -u ${user} -p ${pass}'
+withCredentials([usernamePassword(credentialsId: 'dockering', passwordVariable: 'passes', usernameVariable: 'users')]) {
+sh 'docker login -u ${users} -p ${passes}'
 }
 }
 }
