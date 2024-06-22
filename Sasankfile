@@ -23,6 +23,7 @@ withCredentials([usernamePassword(credentialsId: '209110ec-e209-4b7e-a1b9-5b5f05
 sh 'docker login -u ${user} -p ${pass}'
 }
 }
+}
 stage('docker push'){
  steps{
 sh'docker push sidharth1997/project:v1.0'
