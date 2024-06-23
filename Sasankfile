@@ -30,8 +30,11 @@ sh'docker push sidharth1997/project:v1.0'
 
 }
 }
-
-
+stage('ansible'){
+ steps{
+  ansiblePlaybook credentialsId: 'ansiblessh', disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: 'ansible.yml', vaultTmpPath: ''
+}
+}
 
 }
 }
